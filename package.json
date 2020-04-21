@@ -1,0 +1,25 @@
+{
+  "name": "rapifi",
+  "version": "1.0.0",
+  "description": "sample landing page that deploys on Opsh",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camicodina/RAPIfi.git"
+  },
+  "author": "camicodina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/camicodina/RAPIfi/issues"
+  },
+  "homepage": "https://github.com/camicodina/RAPIfi#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.5.6",
+    "mongoose": "^5.9.10"
+  }
+}
