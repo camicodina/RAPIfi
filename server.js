@@ -1,21 +1,7 @@
-// //create-db.js
-
-// var mongo = require('mongodb');
-
-// var new_db = "mongodb://localhost:27017/rapifi";
-
-// mongo.connect(new_db ,(error , db) => {
-// 	if (error){
-// 		throw error;
-// 	}
-// 	console.log("Database rapifi created successfully");
-// 	//To close the connection
-// 	db.close();
-// });
 
 var express = require('express');
 var path = require('path'); 
-var mongo = require('mongodb');
+var mongo = require('mongodb').MongoClient;
 var bodyParser = require('body-parser');
 var crypto = require('crypto');
 
@@ -53,18 +39,23 @@ app.post('/sign_up' ,function(req,res){
 		"email":email,
 		"telefono" : phone
 	}
-	
+	console.log("holi")
 	mongo.connect(new_db , function(error , db){
 		if (error){
 			throw error;
 		}
+		var dbo = db.db("rapifi");
+
 		console.log("connected to database successfully");
 		//CREATING A COLLECTION IN MONGODB USING NODE.JS
-		db.collection("details").insertOne(data, (err , collection) => {
+		dbo.collection('details',(err, collection)=>{
+			collection.insertOne(data, (err , collection) => {
 			if(err) throw err;
+			
 			console.log("Record inserted successfully");
 			console.log(collection);
 		});
+		})
 	});
 	
 	console.log("DATA is " + JSON.stringify(data) );
