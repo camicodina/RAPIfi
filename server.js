@@ -15,9 +15,9 @@ app.get('/',function(req,res){
 		'Access-Control-Allow-Origin' : '*'
 	});
 	return res.redirect('/public/index.html');
-}).listen(3000);
+}).listen(8080);
 
-console.log("Server listening at : 3000");
+console.log("Server listening at : 8080");
 app.use('/public', express.static(__dirname + '/public'));
 app.use( bodyParser.json() );
 app.use(bodyParser.urlencoded({ // to support URL-encoded bodies
