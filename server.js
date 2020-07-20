@@ -7,7 +7,7 @@ var crypto = require('crypto');
 
 var app = express();
 //enter the name of the database in the end 
-var new_db = "mongodb://localhost:27017/rapifi";
+var new_db = "mongodb://localhost:27017/mongodb-1-j95v5";
 
 //create server								
 app.get('/',function(req,res){
