@@ -43,6 +43,7 @@ app.post('/sign_up' ,function(req,res){
 	mongo.connect(new_db , function(error , db){
 		if (error){
 			throw error;
+			alert("ERROR")
 		}
 		var dbo = db.db("rapifi");
 
