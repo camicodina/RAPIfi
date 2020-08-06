@@ -1,0 +1,39 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug quote-backend",
+            "request": "attach",
+            "hostName": "127.0.0.1",
+            "projectName": "quote-backend",
+            "timeout": 180000
+        },
+        {
+            "type": "node",
+            "name": "Debug quote-frontend",
+            "request": "attach",
+            "address": "127.0.0.1",
+            "localRoot": "/Users/camilacodina/Desktop/APPSODY DEMO/demo/quote-frontend",
+            "remoteRoot": "/project/user-app",
+            "restart": true
+        },
+        {
+            "type": "node",
+            "name": "Debug frontend-simpleapp",
+            "request": "attach",
+            "address": "127.0.0.1",
+            "localRoot": "/Users/camilacodina/Desktop/Proyectos Web/CP4Apps - MCM DEMO/frontend/frontend-simpleapp",
+            "remoteRoot": "/project/user-app",
+            "restart": true
+        },
+        {
+            "type": "node",
+            "name": "Debug backend-simpleapp",
+            "request": "attach",
+            "address": "127.0.0.1",
+            "localRoot": "/Users/camilacodina/Desktop/Proyectos Web/CP4Apps - MCM DEMO/simple-app-back/backend-simpleapp",
+            "remoteRoot": "/project/user-app",
+            "restart": true
+        }
+    ]
+}

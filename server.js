@@ -42,8 +42,8 @@ app.post('/sign_up' ,function(req,res){
 	console.log("holi")
 	mongo.connect(new_db , function(error , db){
 		if (error){
+			console.log("ERROR")
 			throw error;
-			alert("ERROR")
 		}
 		var dbo = db.db("rapifi");
 
